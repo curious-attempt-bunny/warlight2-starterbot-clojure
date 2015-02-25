@@ -11,7 +11,7 @@
 
 (defn enemy?
     [region]
-    (= :enemy (:owner region)))
+    (= :them (:owner region)))
 
 (defn neutral?
     [region]
