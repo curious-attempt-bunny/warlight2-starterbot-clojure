@@ -39,4 +39,34 @@ Use `# Valid: !THE_EXACT_OUTPUT_YOU_DONT_WANT` or `# Valid: ![THE_FRAGMENT_OF_OU
 * handlers.clj - the logic to parse incoming information and requests for action (you should rarely need to touch this).
 * launcher.clj - an ugly hack to make the code work as a single script with the warlight2 engine.
 
+## State structure
 
+The central data structure to this bot is the `state`. It's a map that represents the entire game state. Here is what those keys are:
+
+* :max_rounds - e.g. 45
+* :starting_armies - e.g. 5
+* :time_per_move - e.g. 500
+* :last-placement - e.g. [{:region {:id 17, ...}, :armies 5}, ...]
+* :regions - a map of region id to region - e.g. {7 {:id 7, :super_region_id 3, :armies 2, :neighbours (13 8 12 6 3), :owner :us}, ... }
+* :our_name - e.g. "player1"
+* :super_regions - a map of super region id to super region e.g. {5 {:id 5, :reward 1}, ...}
+* :their_name - e.g. "player2"
+* :their_starting_regions - e.g. (15 4)
+
+### Regions
+
+The keys of a region are:
+
+* :id - e.g. 17
+* :super_region_id - e.g. 5
+* :armies - e.g. 2
+* :neighbours - e.g. (16)
+* :owner - e.g. :us
+* :wasteland - e.g. true
+
+### Super regions
+
+The keys of a super region are:
+
+* :id - e.g. 5
+* :reward - e.g. 1
