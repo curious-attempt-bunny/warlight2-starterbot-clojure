@@ -18,6 +18,8 @@ This creates `bot.zip` ready for uploading to warlight2.
 
 ## Validity condition format
 
+See [an example](https://github.com/curious-attempt-bunny/warlight2-starterbot-clojure/blob/master/spec/Attacks.txt#L47) to see where these validity conditions go.
+
 ### Exact output
 
 Use `# Valid: THE_EXACT_OUTPUT_YOU_EXPECT`.
