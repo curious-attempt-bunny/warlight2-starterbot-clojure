@@ -1,3 +1,9 @@
+# What it can do
+
+It understands the [warlight2 engine](http://theaigames.com/competitions/warlight-ai-challenge-2#) input and provides abstractions for you to describe the actions the bot should take. This starter bot has no brains. It will place all starting armies on one spot and move armies to a random neighbour. It does include a nifty test harness so that you can quickly correct it's behaviour.
+
+Good hunting!
+
 # Create upload zip
 
     ./package.sh
