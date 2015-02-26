@@ -10,10 +10,20 @@ Good hunting!
 
 This creates `bot.zip` ready for uploading to warlight2.
 
-# Run it from the REPL
+# Run from the REPL
 
     lein repl
     (load "runner")
+
+Try inputting any warlight2 engine input, e.g.:
+
+    setup_map super_regions 1 1 2 0 3 2 4 6 5 1
+
+The bot will function as normal. In addition it will echo the current state to stderr.
+
+# Run from the command-line
+
+    lein run
 
 Try inputting any warlight2 engine input, e.g.:
 
